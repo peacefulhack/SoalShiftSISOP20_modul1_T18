@@ -20,7 +20,8 @@ dengan cara menjumlahkan profit dari region yang sama, lalu membandingkan sampai
 <h6>a = a + row 21(profit)</h6><p>sebenarnya bisa menggunakan a+=row 21, namun agar mudah dimengerti, kami lebih memilih cara bisasa, yaitu a = a+ row 21<br>Pada bagian end, kami menggunakan pendeteksi biasa, jika central kurang dari west south dan east maka print central, dan seterusnya.</p>
 <h6>FPAT='([^,]+)|("[^"]+")'</h6>
 <p>digunakan ketika kita memerlukan separator dengan kondisi, disini kita menggunakan separator "," namun tanda koma didalam petik, tidak sebagai separator melainkan sebuah nama satu kesatuan, maka kita tulis seperti diatas. yang terakhir adalah setelah ditulis semua, jangan lupa menuliskan dataset yang akan kita ambil, disini contohnya adalah Sample-Superstore.csv</p>
-<img src"dokumentasi/dokum2.png">
+
+<img src="dokumentasi/dokum2.png">
 
 <h2>Kesulitan</h2>
 karena kami sebelumnya belum sering menggunakan Terminal Linux, kami memiliki banyak kesulitan, pertama yaitu sintax dari AWK sendiri, yang mana menurut kami aneh dengan adanya begin, lalu bagian tengah, dan end. lalu yang kedua adalah kesulitan dengan suatu variable pada $21 yang berisi  1000 box/pcs yang mana itu bukanlah profit, setelah mencari, kami menemukan bahwa ada tanda koma didalam tanda petik yang seharusnya bukan separator, lalu setelah mencari, kami menemukan FPAT. setelah mencoba FPAT, tetap sama, tidak bisa menignore koma didalam petik, selang 1 hari, kami menemukan bahwa FPAT dapat digunakan jika Gawk di install pada linux, setelah itu, kami mengalami kemajuan, yang tadinya tidak bisa mendeteksi menjadi bisa, lalu untuk kendala terakhir adalah, saya tidak tahu bagaimana cara baca FPAT tersebut, mungkin sampai tugas ini terkumpul, mungkin saya belum memahaminya.
