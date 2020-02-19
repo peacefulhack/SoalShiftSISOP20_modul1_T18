@@ -15,5 +15,5 @@ dalam hal ini, mahasiswa diharapkan sudah mengetahui tentang
 dengan cara menjumlahkan profit dari region yang sama, lalu membandingkan sampai dapat region dengan keuntungan paling sedikit.
 
 <h2>2. Penyelesaian</h2>
-![](dokumentasi/dokum1.png)
+<![dokumentasi/dokum1.png]()
 <p>dalam script diatas, pertama masukkan awk untuk mengidentifikasi bahwa yang kita jalankan adalah dapur perinta awk. lalu mengetikkan "BEGIN" yang mana begin adalah script yang dilakukan sekali dan pertama kali. dan kami isi dengan mendeklarasikan perintah</p>
