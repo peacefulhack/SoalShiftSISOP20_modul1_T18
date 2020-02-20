@@ -50,4 +50,37 @@ Ternyata saya bisa menemukan solusi lain setelah mencari cari, menggunakan array
 lalu pada end, menggunakan for 2 kali untuk mengetahui yang paling sedikit pertama dan kedua, yang pertama di loop dulu, setelah ketemu, yang kedua di loop, loopnya menggunakan jika nilai pertama lebih kecil dari profit var itu, maka masukkan nilai dan nama var itu ke "pertama" atau discript bernama "satu" untuk nilai dan "nsatu" untuk nama var nya, yang kedua sama namun kondisinya ditambah "dan lebih besar dari (satu)"
 <img src="dokumentasi/dokum6.png">
 
+<h2>Source</h2>
+https://unix.stackexchange.com/questions/242946/using-awk-to-sum-the-values-of-a-column-based-on-the-values-of-another-column
+
 # Soal Nomor 1c
+<h2>1. Penjelasan</h2>
+dalam soal 1c, menampilkan 10 produk (product name) yang memiliki keuntungan (profit) paling sedikit berdasarkan 2 negara bagian (state) hasil poin b, dimana hasil poin b adalah Texas dan Ilinois, menggunakan cara yang lebih sederhana namun lebih kompleks hehe~, dengan menggunakan array, sort dan head untuk membatasi output, tanpa mendeklarasikan variable.
+
+<h2>2. Penyelesaian</h2>
+<img src="dokumentasi/dokum7.png">
+dalam script diatas, menggunakan if yang sama seperti nomor 1b, dengan kondisi "atau", dan di END, menggunakan for untuk print angka dulu baru nama, lalu kita pipe dengan sort lalu pipe lagi dengan head, sort -g adalah sorting bilangan, jika tidak ada, maka minus dan tidak menjadi satu (1,-1,-1,2,3,-3...) yang harusnya (-3,-1,-1,1,2,3..) dan "head -n" n disini adalah line nya, berapa jumlah line dari head yang akan ditampilkan, karena dibutuhkan 10, maka head -n 10
+
+<img src="dokumentasi/dokum8.png">
+
+<h2>Kesulitan</h2>
+-
+<h2>Source</h2>
+https://superuser.com/questions/264442/how-do-i-limit-the-number-of-displayed-lines-through-ls
+
+
+# Soal Nomor 2a dan b
+<h2>1. Penjelasan</h2>
+membuat sebuah script bash yang dapat menghasilkan password secara acak sebanyak 28 karakter yang terdapat huruf besar, huruf kecil, dan angka. (b) Password acak tersebut disimpan pada file berekstensi .txt dengan nama berdasarkan argumen yang diinputkan dan HANYA berupa alphabet.
+pertama, diharapkan pembaca memahami sed, pipe, dan bash dasar.
+didalam kodingan, saya menggunakan for i in $* yang berarti tiap argumen yang ditulis, jalankan program, lalu echo $i sebagai inputan dari sed nya, pada sed nya, digunakan alphabet yang di invers, yang berarti selain alphabet di replace dengan tidak ada atau /(kosong)/ lalu inputan itu dimasukkan kedalam pipe lagi yang mana dimasukkan dalam var nama, lalu menggunakan password generator apg, dengan SNCL dimana harus memiliki satu special char yang sudah ditentukan, minimal 28 kata max 28 kata, dan output cuma 1 dan dimasukkan ke file txt yang bernama "nama" dari yang sudah di inputkan
+
+<h2>Penyelesaian</h2>
+<img src="dokumentasi/dokum9.png">
+<img src="dokumentasi/dokum10.png">
+cukup jelas dari pembahasan di Penjelasan
+
+<h2>Kesulitan</h2>
+untuk mencari penggunaan sed cukup menguras waktu, tapi bisa
+
+# Soal Nomor 2c
