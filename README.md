@@ -48,6 +48,6 @@ dari script saya sendiri paham bahwa script saya tidak efektif, tidak responsif 
 <img src="dokumentasi/dokum5.png">
 Ternyata saya bisa menemukan solusi lain setelah mencari cari, menggunakan array, untuk begin sama, untuk deklarasi var, lalu pada main nya, saya isi memasukkan kolom 11 yang kolom 13 nya adalah central, lalu menghitung menggunakan += profitnya, yaitu kolom 21.
 lalu pada end, menggunakan for 2 kali untuk mengetahui yang paling sedikit pertama dan kedua, yang pertama di loop dulu, setelah ketemu, yang kedua di loop, loopnya menggunakan jika nilai pertama lebih kecil dari profit var itu, maka masukkan nilai dan nama var itu ke "pertama" atau discript bernama "satu" untuk nilai dan "nsatu" untuk nama var nya, yang kedua sama namun kondisinya ditambah "dan lebih besar dari (satu)"
-
+<img src="dokumentasi/dokum6.png">
 
 # Soal Nomor 1c
