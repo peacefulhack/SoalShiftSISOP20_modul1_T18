@@ -43,5 +43,5 @@ kedua adalah Illinois berjumlah -11559
 <h2>Kesulitan</h2>
 dari script saya sendiri paham bahwa script saya tidak efektif, tidak responsif dan rawan error.
 
-<hl></hl>
+<hr></hr>
 # Soal Nomor 1c
