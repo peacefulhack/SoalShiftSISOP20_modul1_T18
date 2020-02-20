@@ -67,3 +67,20 @@ dalam script diatas, menggunakan if yang sama seperti nomor 1b, dengan kondisi "
 -
 <h2>Source</h2>
 https://superuser.com/questions/264442/how-do-i-limit-the-number-of-displayed-lines-through-ls
+
+
+# Soal Nomor 2a dan b
+<h2>1. Penjelasan</h2>
+membuat sebuah script bash yang dapat menghasilkan password secara acak sebanyak 28 karakter yang terdapat huruf besar, huruf kecil, dan angka. (b) Password acak tersebut disimpan pada file berekstensi .txt dengan nama berdasarkan argumen yang diinputkan dan HANYA berupa alphabet.
+pertama, diharapkan pembaca memahami sed, pipe, dan bash dasar.
+didalam kodingan, saya menggunakan for i in $* yang berarti tiap argumen yang ditulis, jalankan program, lalu echo $i sebagai inputan dari sed nya, pada sed nya, digunakan alphabet yang di invers, yang berarti selain alphabet di replace dengan tidak ada atau /(kosong)/ lalu inputan itu dimasukkan kedalam pipe lagi yang mana dimasukkan dalam var nama, lalu menggunakan password generator apg, dengan SNCL dimana harus memiliki satu special char yang sudah ditentukan, minimal 28 kata max 28 kata, dan output cuma 1 dan dimasukkan ke file txt yang bernama "nama" dari yang sudah di inputkan
+
+<h2>Penyelesaian</h2>
+<img src="dokumentasi/dokum9.png">
+<img src="dokumentasi/dokum10.png">
+cukup jelas dari pembahasan di Penjelasan
+
+<h2>Kesulitan</h2>
+untuk mencari penggunaan sed cukup menguras waktu, tapi bisa
+
+# Soal Nomor 2c
