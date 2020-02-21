@@ -17,11 +17,13 @@ dengan cara menjumlahkan profit dari region yang sama, lalu membandingkan sampai
 <h2>2. Penyelesaian</h2>
 <img src="dokumentasi/dokum1.png">
 <p>dalam script diatas, pertama masukkan awk untuk mengidentifikasi bahwa yang kita jalankan adalah dapur perinta awk. lalu mengetikkan "BEGIN" yang mana begin adalah script yang dilakukan sekali dan pertama kali. dan kami isi dengan mendeklarasikan perintah. lalu pada bagian tengah, yaitu bagian yang dijalankan berulang ulang, kami memasukkan satu satu, jika row 13 adalah (Central/West/South/East) maka menjalankan:
-```bash
+
+```
 a = a + row 21(profit)
 ```
 sebenarnya bisa menggunakan a+=row 21, namun agar mudah dimengerti, kami lebih memilih cara bisasa, yaitu a = a+ row 21<br>Pada bagian end, kami menggunakan pendeteksi biasa, jika central kurang dari west south dan east maka print central, dan seterusnya.</p>
-```bash
+
+```
 FPAT='([^,]+)|("[^"]+")
 ```
 <p>digunakan ketika kita memerlukan separator dengan kondisi, disini kita menggunakan separator "," namun tanda koma didalam petik, tidak sebagai separator melainkan sebuah nama satu kesatuan, maka kita tulis seperti diatas. yang terakhir adalah setelah ditulis semua, jangan lupa menuliskan dataset yang akan kita ambil, disini contohnya adalah Sample-Superstore.csv</p>
@@ -42,7 +44,8 @@ pada if jika nilai lebih kecil dari nilai yang sudah ada pada satu, maka dua = s
 lalu prinf pertama untuk saya mengecek, prinf kedua untuk nilai pasti terkecilnya
 <img src="dokumentasi/dokum4.png">
 hasilnya:
-```bash
+
+```
 terkecil pertama adalah Texas berjumlah -24798
 kedua adalah Illinois berjumlah -11559
 ```
@@ -95,7 +98,37 @@ menenkripsi dengan menggunakan konversi huruf (string manipulation) yang disesua
 dengan jam(0-23), disini saya menggunakan cara semi manual/WET, pertama yang harus dikuasai adalah: bash umum, pipe, tr, date, apg. pengenkripsian data menggunakan chipertext, dengan menambahkan jam didalam string nama, contoh: pembuatan file yang bernama a pada jam 01:12 menjadi b.txt
 
 <h2>Penyelesaian</h2>
+<img src="dokumentasi/dokum11.png">
 didalam script ini, saya menggunakan element yang sama seperti 2b, yaitu sed, dan apg, adapula yang baru dipelajari bernama tr, tr hampir sama dengan sed namun karena beberapa masalah yang dapat dilihat pada seksi kesulitan dibawah, akhirnya kami menggunakan tr. didalam script memiliki var A dimana untuk mendeklarasikan jam sekarang, lalu iter yang sama seperti poin 2b, dan didalam pipe kedua, kami tambahkan if dan elif untuk jika waktu sama dengan jam 0,1,2,3.. dan seterusnya, jika jam 1 (contoh), maka terdapat 
-```bash
-tr'[A-Za-z]' ''
+
 ```
+tr'[A-Za-z]' '[B-ZAb-za]'
+```
+yang mana artinya tolong ubah dari A-Z atau a-z menjadi B-Z dan A atau menjadi b-z dan a, jika ada alphabet Z maka akan menjadi A.
+
+dan hasilnya di pipe lagi dan memasukkan fungsi apg sebagai password generator ke dalam file bernama hasil tadi . txt
+<img src="dokumentasi/dokum12.png">
+<h2>Kesulitan</h2>
+didalam fitur sed, entah saya yang memang kurang mendalami atau gimana, separator kedua sed tidak bisa memberikan expresi, contoh:
+
+```
+sed s/[A-Z]/[B-ZA]/g
+fungsi diatas bermakna tolong ganti setiap A sampai Z menjadi [B-ZA], jika kita input ABCD maka akan menjadi 
+[B-ZA][B-ZA][B-ZA][B-ZA] karena separator kedua atau inputan tidak bisa berupa ekspresi.
+```
+
+# Soal Nomor 2d
+<h2>1. Penjelasan</h2>
+de encrypt dari nomer 2c hampir sama, menggunakan cara yang sama namun dibalik.
+
+<h2>penyelesaian</h2>
+<img src="dokumentasi/dokum13.png">
+hanya membalik dari
+
+```
+tr '[A-Za-z]' '[C-ZA-Bc-za-b]'
+menjadi
+tr '[C-ZA-Bc-za-b]' '[A-Za-z]'
+dan seterusnya
+```
+hasil:
