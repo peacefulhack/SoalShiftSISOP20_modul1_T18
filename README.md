@@ -132,6 +132,40 @@ tr '[C-ZA-Bc-za-b]' '[A-Za-z]'
 dan seterusnya
 ```
 hasil:
-<img src="dokumentasi/dokum13.png">
+<img src="dokumentasi/dokum14.png">
 
-# Soal Nomor 3
+# Soal Nomor 3a
+<h2>1. Penjelasan</h2>
+membuat script untuk mendownload 28 gambar dari
+"https://loremflickr.com/320/240/cat" menggunakan command wget dan menyimpan file
+dengan nama "pdkt_kusuma_NO" (contoh: pdkt_kusuma_1, pdkt_kusuma_2,
+pdkt_kusuma_3) serta jangan lupa untuk menyimpan log messages wget kedalam
+sebuah file "wget.log".
+
+<h2>penyelesaian</h2>
+<img src="dokumentasi/dokum15.png">
+Menggunakan bash script yang bernama hello-world mendownload 28 gambar dari situs loremflickr.com/320/240/cat dinamai dengan pdkt_kusuma_nomor. Langkah pertama dilakukan for loop sebanyak 28 kali, di dalam loop tersebut mengambil gambar dengan fungsi wget dan menyimpan dalam wget.log. Mengubah nama dengan ekstensi -O dan -nd untuk mengekslusikan direktori dari download. -r untuk download rekursif atau berulang. beserta url download yaitu dari situs di atas
+<img src="dokumentasi/dokum16.png">
+
+# Soal Nomor 3b
+<h2>1. Penjelasan</h2>
+membuat script no 3a yang berjalan setiap 8 jam dimulai dari jam 6.05 setiap hari kecuali hari Sabtu
+
+<h2>penyelesaian</h2>
+embuat crontab dengan fungsi crontab -e lalu mengisinya dengan format 5 6,14,22 * * 0,1,2,3,4,5 /home/ghifari/hello-world dengan 5 menit 6,14,22 setiap 8 jam dimulai dari jam 6 lalu hari dimulai dari hari 0 yaitu minggu yaitu sampai jumat yaitu 5 
+
+```
+5 6,14,22 * * 0,1,2,3,4,5 /home/peacefulhack/hello-world
+```
+
+# Soal Nomor 3c
+<h2>1. Penjelasan</h2>
+Untuk menemukan gambar yang identik dan memindahkan gambar tersebut ke dalam folder khusus diperlukan algoritma sorting untuk membandingkan gambar satu per satu. Pada modul ini digunakan algoritma bubble sorting.
+
+<h2>penyelesaian</h2>
+<img src="dokumentasi/dokum17.png">
+Pada dalam algoritma tersebut dilakukan mkdir untuk membuat direktori baru dan mv untuk memindahkan file.
+Dilakukan dua for loop, pada loop pertama dilakukan iterasi sebanyak 28 kali pada loop kedua dilakukan mkdir dan mv.
+
+<h2>Kesulitan</h2>
+Mencari cara untuk mengidentifikasi gambar yang identik dari berbagai gambar yang berbeda
