@@ -132,3 +132,6 @@ tr '[C-ZA-Bc-za-b]' '[A-Za-z]'
 dan seterusnya
 ```
 hasil:
+<img src="dokumentasi/dokum13.png">
+
+# Soal Nomor 3
