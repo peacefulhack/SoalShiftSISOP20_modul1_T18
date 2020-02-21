@@ -16,9 +16,14 @@ dengan cara menjumlahkan profit dari region yang sama, lalu membandingkan sampai
 
 <h2>2. Penyelesaian</h2>
 <img src="dokumentasi/dokum1.png">
-<p>dalam script diatas, pertama masukkan awk untuk mengidentifikasi bahwa yang kita jalankan adalah dapur perinta awk. lalu mengetikkan "BEGIN" yang mana begin adalah script yang dilakukan sekali dan pertama kali. dan kami isi dengan mendeklarasikan perintah. lalu pada bagian tengah, yaitu bagian yang dijalankan berulang ulang, kami memasukkan satu satu, jika row 13 adalah (Central/West/South/East) maka menjalankan:</p>
-<h6>a = a + row 21(profit)</h6><p>sebenarnya bisa menggunakan a+=row 21, namun agar mudah dimengerti, kami lebih memilih cara bisasa, yaitu a = a+ row 21<br>Pada bagian end, kami menggunakan pendeteksi biasa, jika central kurang dari west south dan east maka print central, dan seterusnya.</p>
-<h6>FPAT='([^,]+)|("[^"]+")'</h6>
+<p>dalam script diatas, pertama masukkan awk untuk mengidentifikasi bahwa yang kita jalankan adalah dapur perinta awk. lalu mengetikkan "BEGIN" yang mana begin adalah script yang dilakukan sekali dan pertama kali. dan kami isi dengan mendeklarasikan perintah. lalu pada bagian tengah, yaitu bagian yang dijalankan berulang ulang, kami memasukkan satu satu, jika row 13 adalah (Central/West/South/East) maka menjalankan:
+```bash
+a = a + row 21(profit)
+```
+sebenarnya bisa menggunakan a+=row 21, namun agar mudah dimengerti, kami lebih memilih cara bisasa, yaitu a = a+ row 21<br>Pada bagian end, kami menggunakan pendeteksi biasa, jika central kurang dari west south dan east maka print central, dan seterusnya.</p>
+```bash
+FPAT='([^,]+)|("[^"]+")
+```
 <p>digunakan ketika kita memerlukan separator dengan kondisi, disini kita menggunakan separator "," namun tanda koma didalam petik, tidak sebagai separator melainkan sebuah nama satu kesatuan, maka kita tulis seperti diatas. yang terakhir adalah setelah ditulis semua, jangan lupa menuliskan dataset yang akan kita ambil, disini contohnya adalah Sample-Superstore.csv</p>
 
 <img src="dokumentasi/dokum2.png">
@@ -37,9 +42,10 @@ pada if jika nilai lebih kecil dari nilai yang sudah ada pada satu, maka dua = s
 lalu prinf pertama untuk saya mengecek, prinf kedua untuk nilai pasti terkecilnya
 <img src="dokumentasi/dokum4.png">
 hasilnya:
+```bash
 terkecil pertama adalah Texas berjumlah -24798
 kedua adalah Illinois berjumlah -11559
-
+```
 <h2>Kesulitan</h2>
 dari script saya sendiri paham bahwa script saya tidak efektif, tidak responsif dan rawan error.
 
@@ -84,3 +90,12 @@ cukup jelas dari pembahasan di Penjelasan
 untuk mencari penggunaan sed cukup menguras waktu, tapi bisa
 
 # Soal Nomor 2c
+<h2>1. Penjelasan</h2>
+menenkripsi dengan menggunakan konversi huruf (string manipulation) yang disesuaikan
+dengan jam(0-23), disini saya menggunakan cara semi manual/WET, pertama yang harus dikuasai adalah: bash umum, pipe, tr, date, apg. pengenkripsian data menggunakan chipertext, dengan menambahkan jam didalam string nama, contoh: pembuatan file yang bernama a pada jam 01:12 menjadi b.txt
+
+<h2>Penyelesaian</h2>
+didalam script ini, saya menggunakan element yang sama seperti 2b, yaitu sed, dan apg, adapula yang baru dipelajari bernama tr, tr hampir sama dengan sed namun karena beberapa masalah yang dapat dilihat pada seksi kesulitan dibawah, akhirnya kami menggunakan tr. didalam script memiliki var A dimana untuk mendeklarasikan jam sekarang, lalu iter yang sama seperti poin 2b, dan didalam pipe kedua, kami tambahkan if dan elif untuk jika waktu sama dengan jam 0,1,2,3.. dan seterusnya, jika jam 1 (contoh), maka terdapat 
+```bash
+tr'[A-Za-z]' ''
+```
