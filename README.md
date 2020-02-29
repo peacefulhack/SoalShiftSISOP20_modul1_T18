@@ -164,7 +164,11 @@ Untuk menemukan gambar yang identik dan memindahkan gambar tersebut ke dalam fol
 
 
 <h2>penyelesaian</h2>
-<img src="dokumentasi/dokum17.png">
+<img src="3c.png">
+<img src="3c_.png">
+<img src="3c1.png">
+<img src="3c2.png">
+<img src="3c3.png">
 Untuk mengidentifikasi gambar yang identik langkah awal yaitu membuat variabel b untuk mencari semua gambar pdkt_kusuma, lalu mensorting semua gambar tersebut. Lalu dilakukan grep untuk menccari lokasi gambar tersebut dan memasukannya ke dalam location.log. Setelah itu, dilakukan looping untuk mencari gambar mana yang identik dengan menandai gambar mana yang identik. Gambar yang identik akan ditaruh pada array c=() dan pada folder duplicate sedangkan yang tidak identik akan ditaruh pada kenangan dan melakukan wget log.
 
 <h2>Kesulitan</h2>
