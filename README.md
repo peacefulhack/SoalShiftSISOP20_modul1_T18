@@ -1,5 +1,5 @@
 # Penjelasan dan Penyelesaian Soal Shift 1 Sistem Operasi
-disusun oleh: M. Mikail Dwi Khusnanda (028) & Ghifari Akbar
+disusun oleh: M. Mikail Dwi Khusnanda (028) & Ghifari Akbar R (040)
 
 
 # Soal Nomer 1a
