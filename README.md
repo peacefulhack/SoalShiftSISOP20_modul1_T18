@@ -160,12 +160,12 @@ embuat crontab dengan fungsi crontab -e lalu mengisinya dengan format 5 6,14,22 
 
 # Soal Nomor 3c
 <h2>1. Penjelasan</h2>
-Untuk menemukan gambar yang identik dan memindahkan gambar tersebut ke dalam folder khusus diperlukan algoritma sorting untuk membandingkan gambar satu per satu. Pada modul ini digunakan algoritma bubble sorting.
+Untuk menemukan gambar yang identik dan memindahkan gambar tersebut ke dalam folder khusus diperlukan algoritma sorting untuk membandingkan gambar satu per satu. Dalam membuat script untuk mengidentifikasi gambar harus mencari gambar yang identik dan memisahkan gambar tersebut ke dalam folder bernama duplicate. Sedangkan gambar yang tidak identik akan ditaruh pada folder kenangan. Lalu dilakukan log menjadi log.bak.
+
 
 <h2>penyelesaian</h2>
 <img src="dokumentasi/dokum17.png">
-Pada dalam algoritma tersebut dilakukan mkdir untuk membuat direktori baru dan mv untuk memindahkan file.
-Dilakukan dua for loop, pada loop pertama dilakukan iterasi sebanyak 28 kali pada loop kedua dilakukan mkdir dan mv.
+Untuk mengidentifikasi gambar yang identik langkah awal yaitu membuat variabel b untuk mencari semua gambar pdkt_kusuma, lalu mensorting semua gambar tersebut. Lalu dilakukan grep untuk menccari lokasi gambar tersebut dan memasukannya ke dalam location.log. Setelah itu, dilakukan looping untuk mencari gambar mana yang identik dengan menandai gambar mana yang identik. Gambar yang identik akan ditaruh pada array c=() dan pada folder duplicate sedangkan yang tidak identik akan ditaruh pada kenangan dan melakukan wget log.
 
 <h2>Kesulitan</h2>
-Mencari cara untuk mengidentifikasi gambar yang identik dari berbagai gambar yang berbeda
+Memindahkan semua gambar identik, gambar yang terpindahkan merupakan gambar identik tetapi tidak semua yang identik dipindahkan. Mencari cara untuk membandingkan semua gambar.
